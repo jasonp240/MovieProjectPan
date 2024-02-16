@@ -156,10 +156,22 @@ public class MovieCollection {
                     movieList2.add(movieList.get(i));
                 }
             }
+            selectionSortMovieList(movieList2);
+            for (int i = 0; i < movieList2.size(); i++) {
+                System.out.println((i + 1) + ". " + movieList2.get(i).getTitle());
+            }
+            System.out.println("Which movie would you like to learn more about?");
+            System.out.print("Enter number: ");
+            int numberUser1 = scan.nextInt() - 1;
+            System.out.println();
+            System.out.println("Title: " + movieList2.get(numberUser1).getTitle());
+            System.out.println("Runtime: " + movieList2.get(numberUser1).getRuntime() + " minutes");
+            System.out.println("Directed by: " + movieList2.get(numberUser1).getDirector());
+            System.out.println("Cast: " + movieList2.get(numberUser1).getCast());
+            System.out.println("Overview: " + movieList2.get(numberUser1).getOverview());
+            System.out.println("User rating: " + movieList2.get(numberUser1).getUserRating());
+        } else {
+            System.out.println("No results match your search");
         }
-        System.out.println("No results match your search");
     }
-
-
-
 }
